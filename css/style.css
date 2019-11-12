@@ -185,7 +185,7 @@ body {
     .reduced_navbar {
         width: 100%;
         height: 7vh;
-        background: rgb(40, 40, 40, 1);
+        background: rgb(45, 45, 45, 1);
     }
 }
 
@@ -439,18 +439,67 @@ header .container .mainContainer .main_element .description {
 
 .competences {
     background: var(--footer-color);
-    padding: 10vh;
+    padding: 6vh;
     margin-bottom: 200px;
+    z-index: -1;
 }
 
 .competences .container {
-    width: 85%;
-    border: 1px solid black;
+    width: 100%;
+    max-width: 1000px;
     display: flex;
-    
+    justify-content: center;
+    padding: 0;
+    border: 1px solid black;
+}
+.competences .container .skillColumn {
+    background: none;
+    max-width: 250px;
+    height: 650px;
+    width: 32%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    z-index: 0;
+}
+.competences .container .skillColumn .skillCategory {
+    background: var(--carbon-dark);
+    border-radius: 5px 5px 0 0;
+    height: 50px;
+    width: 100%;
+    z-index: 0;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    color: var(--lighty-white);
+    font-weight: 600;
+    font-size: 2rem;
+}
+.competences .container .skillColumn .skillDetail {
+    background: none;
+    width: 100%;
+    height: calc(100% - 50px);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    animation: 1s skillSlideDown ease-out;
+    z-index: -1;
+}
+.competences .container .skillColumn .skillDetail img {
+    width: 70px;
+    height: auto;
+    margin-top: 30px;
+
 }
 
-
+@keyframes skillSlideDown {
+    0% {transform: translate3d(0,-150%,0);}
+    100% {transform: translate3d(0,0,0);}
+}
 /*=============================================
                     A PROPOS
 ===============================================*/

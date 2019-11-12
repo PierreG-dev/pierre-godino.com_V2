@@ -99,25 +99,25 @@ function headerUpdate() {
     for (let i = 0; i < headerData.length; ++i) {
         switch (language) {
             case 1: // anglais
-            headerContent.innerHTML += `<div class="main_element">
-                                            <div class="title">
-                                                ${headerData[i].english[0]}
-                                            </div>
-                                            <div class="description">
-                                                ${headerData[i].english[1]}
-                                            </div>
-                                        </div>`
+                headerContent.innerHTML += `<div class="main_element">
+                                                <div class="title">
+                                                    ${headerData[i].english[0]}
+                                                </div>
+                                                <div class="description">
+                                                    ${headerData[i].english[1]}
+                                                </div>
+                                            </div>`
                 break;
 
             default: // francais
-            headerContent.innerHTML += `<div class="main_element">
-                                            <div class="title">
-                                                ${headerData[i].francais[0]}
-                                            </div>
-                                            <div class="description">
-                                                ${headerData[i].francais[1]}
-                                            </div>
-                                        </div>`
+                headerContent.innerHTML += `<div class="main_element">
+                                                <div class="title">
+                                                    ${headerData[i].francais[0]}
+                                                </div>
+                                                <div class="description">
+                                                    ${headerData[i].francais[1]}
+                                                </div>
+                                            </div>`
                 break;
         }
     }
@@ -179,12 +179,13 @@ function portfolioUpdate() {
     for (let i = 0; i < portfolioData.length; ++i) {
         switch (language) {
             case 1: //anglais
-            portfolioContainer.innerHTML += `<a href="${portfolioData[i].href}">
-                                                <div class="card col-sm-12 col-md-6 col-lg-6" style="background-image: url(${portfolioData[i].img_src});">
-                                                    <p class="timestamp">${portfolioData[i].timestamp}</p>
-                                                    <h4>${portfolioData[i].english}</h4>
-                                                </div>
-                                             </a>`;
+                portfolioContainer.innerHTML += `<a href="${portfolioData[i].href}">
+                                                    <div class="card col-sm-12 col-md-6 col-lg-6" style="background-image: url(${portfolioData[i].img_src});">
+                                                        <p class="timestamp">${portfolioData[i].timestamp}</p>
+                                                        <h4>${portfolioData[i].english}</h4>
+                                                    </div>
+                                                 </a>`;
+                                                 break;
             
             default: //francais
                 portfolioContainer.innerHTML += `<a href="${portfolioData[i].href}">
@@ -193,6 +194,7 @@ function portfolioUpdate() {
                                                     <h4>${portfolioData[i].francais}</h4>
                                                 </div>
                                              </a>`;
+                                             break;
         }
     }
 
@@ -205,6 +207,60 @@ portfolioUpdate();
 ===============================================*/
 var imgHauteur = '' + $('header img').height() * 0.5875 + 'px';
 document.querySelector('.competences').style.marginTop = imgHauteur;
+
+const skillsContent = document.querySelectorAll('.skillDetail');
+
+function skillsUpdate() {
+
+    for (let i = 0; i < skillsContent.length; ++i) {
+        skillsContent[i].innerHTML = '';
+    }
+
+    for (let i = 0; i < skillData.length; ++i) {
+        switch(skillData[i].category) {
+            case "front-end" : 
+                switch(language) {
+                    case 1: //anglais
+                        skillsContent[0].innerHTML += `<img src="${skillData[i].img_src}" alt="">`;
+                        break;
+
+                    default: //francais
+                        skillsContent[0].innerHTML += `<img src="${skillData[i].img_src}" alt="">`;
+                        break;
+                    
+                }
+                break;
+
+            case "back-end" : 
+                switch(language) {
+                    case 1: //anglais
+                        skillsContent[1].innerHTML += `<img src="${skillData[i].img_src}" alt="">`;
+                        break;
+
+                    default: //francais
+                        skillsContent[1].innerHTML += `<img src="${skillData[i].img_src}" alt="">`;
+                        break;
+                    
+                }
+                break;
+
+            case "dev-ops" : 
+                switch(language) {
+                    case 1: //anglais
+                        skillsContent[2].innerHTML += `<img src="${skillData[i].img_src}" alt="">`;
+                        break;
+
+                    default: //francais
+                        skillsContent[2].innerHTML += `<img src="${skillData[i].img_src}" alt="">`;
+                        break;
+                    
+                }
+                break;
+        }
+    }
+}
+
+skillsUpdate();
 /*=============================================
                     A PROPOS
 ===============================================*/

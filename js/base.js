@@ -107,7 +107,7 @@ const skillData = [
     {
         francais: "SQL / MongoDB",
         english: "SQL / MongoDB",
-        img_src: "./res/reactLogo.png",
+        img_src: "./res/databaseLogo.png",
         img_alt: "logo SQL / MongoDB",
         category: "back-end"
     },
