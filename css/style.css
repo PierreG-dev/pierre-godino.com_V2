@@ -446,6 +446,8 @@ header .container .mainContainer .main_element .description {
 .competences .container {
     width: 85%;
     border: 1px solid black;
+    display: flex;
+    
 }
 
 
