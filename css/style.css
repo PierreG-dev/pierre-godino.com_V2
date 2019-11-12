@@ -438,8 +438,9 @@ header .container .mainContainer .main_element .description {
 
 
 .competences {
-    background: chocolate;
+    background: var(--footer-color);
     padding: 10vh;
+    margin-bottom: 200px;
 }
 
 .competences .container {

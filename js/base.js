@@ -64,3 +64,79 @@ const portfolioData = [
         timestamp: '05/2019'
     }
 ];
+
+
+
+//Différents secteurs de compétences
+const skillData = [
+    {
+        francais: "HTML5",
+        english: "HTML5",
+        img_src: "./res/html5Logo.png",
+        img_alt: "logo HTML5",
+        category: "front-end"
+    },
+    {
+        francais: "CSS3",
+        english: "CSS3",
+        img_src: "./res/css3Logo.png",
+        img_alt: "logo CSS3",
+        category: "front-end"
+    },
+    {
+        francais: "Javascript",
+        english: "Javascript",
+        img_src: "./res/jsLogo.png",
+        img_alt: "logo Javascript",
+        category: "front-end"
+    },
+    {
+        francais: "Bootstrap",
+        english: "Bootstrap",
+        img_src: "./res/bootstrapLogo.png",
+        img_alt: "logo Bootstrap",
+        category: "front-end"
+    },
+    {
+        francais: "React.js",
+        english: "React.js",
+        img_src: "./res/reactLogo.png",
+        img_alt: "logo React.js",
+        category: "front-end"
+    },
+    {
+        francais: "SQL / MongoDB",
+        english: "SQL / MongoDB",
+        img_src: "./res/reactLogo.png",
+        img_alt: "logo SQL / MongoDB",
+        category: "back-end"
+    },
+    {
+        francais: "Node.js",
+        english: "Node.js",
+        img_src: "./res/nodeJsLogo.png",
+        img_alt: "logo Node.js",
+        category: "back-end"
+    },
+    {
+        francais: "Java",
+        english: "Java",
+        img_src: "./res/javaLogo.png",
+        img_alt: "logo Java",
+        category: "back-end"
+    },
+    {
+        francais: "Git",
+        english: "Git",
+        img_src: "./res/gitLogo.png",
+        img_alt: "logo Git",
+        category: "dev-ops"
+    },
+    {
+        francais: "Algorithmie",
+        english: "Algorithmie",
+        img_src: "./res/algoLogo.png",
+        img_alt: "logo Algorithmie",
+        category: "dev-ops"
+    }
+]
