@@ -648,3 +648,8 @@ header .container .mainContainer .main_element .description {
 /*=============================================
                     FOOTER
 ===============================================*/
+
+footer {
+    background: var(--footer-color);
+    height: 300px;
+}
