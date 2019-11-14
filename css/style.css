@@ -436,7 +436,7 @@ header .container .mainContainer .main_element .description {
                   COMPETENCES
 ===============================================*/
 
-
+/* ----------------- Partie Compétences informatiques ----------------- */
 .competences {
     background: var(--footer-color);
     padding: 10px;
@@ -617,6 +617,26 @@ header .container .mainContainer .main_element .description {
     100% {transform: translate3d(0,0,0);}
 }
 
+/* ----------------- Partie textuelle ----------------- */
+.competences figure {
+    background: none;
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: 40px auto;
+}
+.competences figure .textBox {
+    text-align: center;
+    background: none;
+    width: 50%;
+    color: white;
+}
+.competences figure img {
+    width: 400px;
+    height: auto;
+    margin: auto;
+    border-radius: 4px;
+}
 /*=============================================
                     A PROPOS
 ===============================================*/
