@@ -72,14 +72,17 @@ navBurger.onclick = function() {
 navbarUpdate();
 
 var $navbar = $('.navbar');
+
 $navbar.waypoint(function(direction) {
     if (direction == 'down') {
         $navbar.addClass('reduced_navbar');
+        $('.competences').addClass('navbar_fix');
     }
     else {
         $navbar.removeClass('reduced_navbar');
+        $('.competences').removeClass('navbar_fix');
     }
-})
+}, {offset:'7vh'});
 
 /*=============================================
                     HEADER
@@ -205,8 +208,8 @@ portfolioUpdate();
 /*=============================================
                    COMPETENCES
 ===============================================*/
-var imgHauteur = '' + $('header img').height() * 0.5875 + 'px';
-document.querySelector('.competences').style.marginTop = imgHauteur;
+//var imgHauteur = '' + $('header img').height() * 0.5875 + 'px';
+//document.querySelector('.competences').style.marginTop = imgHauteur;
 
 const skillsContent = document.querySelectorAll('.skillDetail');
 
