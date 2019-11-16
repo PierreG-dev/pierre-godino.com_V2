@@ -201,6 +201,7 @@ function portfolioUpdate() {
                 if(sizeRegulator == 1)
                     portfolioContainer.innerHTML += `<a href="${portfolioData[i].href}">
                                                         <div class="col-sm-12 col-md-5 col-lg-5 box">
+                                                            <div class="darkMaker"></div>
                                                             <h4>${portfolioData[i].english}</h4>
                                                             <img src="${portfolioData[i].img_src}">
                                                         </div>
@@ -208,6 +209,7 @@ function portfolioUpdate() {
                 else
                     portfolioContainer.innerHTML += `<a href="${portfolioData[i].href}">
                                                         <div class="col-sm-12 col-md-6 col-lg-6 box">
+                                                            <div class="darkMaker"></div>
                                                             <h4>${portfolioData[i].english}</h4>
                                                             <img src="${portfolioData[i].img_src}">
                                                         </div>
@@ -223,6 +225,7 @@ function portfolioUpdate() {
                 if (sizeRegulator == 1)
                     portfolioContainer.innerHTML += `<a href="${portfolioData[i].href}">
                                                         <div class="col-sm-12 col-md-5 col-lg-5 box">
+                                                            <div class="darkMaker"></div>
                                                             <h4>${portfolioData[i].francais}</h4>
                                                             <img src="${portfolioData[i].img_src}">
                                                         </div>
@@ -230,6 +233,7 @@ function portfolioUpdate() {
                 else
                     portfolioContainer.innerHTML += `<a href="${portfolioData[i].href}">
                                                         <div class="col-sm-12 col-md-6 col-lg-6 box">
+                                                            <div class="darkMaker"></div>
                                                             <h4>${portfolioData[i].francais}</h4>
                                                             <img src="${portfolioData[i].img_src}">
                                                         </div>

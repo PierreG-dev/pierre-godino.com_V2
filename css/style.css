@@ -411,6 +411,24 @@ header .container .mainContainer .main_element .description {
     opacity: 0;
     font-size: 3rem;
     font-weight: 600;
+    transition: 0.3s;
+    z-index: 1;
+}
+.portfolio .box:hover h4 {
+    opacity: 1;
+}
+
+.portfolio .box .darkMaker {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: black;
+    opacity: 0.35;
+    z-index: 2;
+    transition: 0.3s;
+}
+.portfolio .box:hover .darkMaker {
+    opacity: 0.1;
 }
 
 @keyframes boxHoverAnimation {
@@ -418,6 +436,7 @@ header .container .mainContainer .main_element .description {
     50% {transform: scale3d(1.2,1.2,1);}
     100% {transform: scale3d(1,1,1);}
 }
+
 
 /*=============================================
                   COMPETENCES
