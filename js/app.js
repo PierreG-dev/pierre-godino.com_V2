@@ -211,9 +211,7 @@ function portfolioUpdate() {
                                                             <h4>${portfolioData[i].english}</h4>
                                                             <img src="${portfolioData[i].img_src}">
                                                         </div>
-                                                     </a>`;
-                //console.log(sizeRegulator);
-                
+                                                     </a>`;          
                 break;
 
             default: //francais
@@ -236,13 +234,9 @@ function portfolioUpdate() {
                                                             <img src="${portfolioData[i].img_src}">
                                                         </div>
                                                      </a>`;
-                
-                //console.log(sizeRegulator);
-                
                 break;
         }
     }
-
 }
 
 portfolioUpdate();

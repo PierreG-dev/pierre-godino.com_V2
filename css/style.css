@@ -399,6 +399,11 @@ header .container .mainContainer .main_element .description {
     position: absolute;
     width: 100%;
     height: auto;
+    animation: 10s boxHoverAnimation infinite ease-in-out;
+    animation-play-state: paused;
+}
+.portfolio .box:hover img {
+    animation-play-state: running;
 }
 
 .portfolio .box h4 {
@@ -408,6 +413,11 @@ header .container .mainContainer .main_element .description {
     font-weight: 600;
 }
 
+@keyframes boxHoverAnimation {
+    0% {transform: scale3d(1,1,1);}
+    50% {transform: scale3d(1.2,1.2,1);}
+    100% {transform: scale3d(1,1,1);}
+}
 
 /*=============================================
                   COMPETENCES
