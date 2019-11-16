@@ -344,9 +344,7 @@ header .container .mainContainer .main_element .description {
     flex-direction: column;
     align-items: center;
     background: var(--footer-color);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+    padding: 20px;
 }
 
 .portfolio .titre {
@@ -380,7 +378,7 @@ header .container .mainContainer .main_element .description {
 }
 
 .portfolio .container {
-    width: 95%;
+    width: 90%;
     border: 1px solid black;
 }
 
@@ -422,7 +420,7 @@ header .container .mainContainer .main_element .description {
     position: absolute;
     width: 100%;
     height: 100%;
-    background: black;
+    background: var(--footer-color);
     opacity: 0.35;
     z-index: 2;
     transition: 0.3s;
