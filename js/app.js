@@ -20,6 +20,17 @@ function updateAll() {
                 FONCTIONNALITES
 ===============================================*/
 
+/* WAYPOINTS*/
+var $skillsEVT = $('.competences');
+
+$skillsEVT.waypoint(function (direction) {
+    $('.skillDetail').addClass('skillDisplayAnimation');
+    $('.skillUnder').addClass('skillDisplayAnimationUnder');
+    $('.skillColumn').addClass('shadowRisingAnimation');
+
+    
+}, { offset: '50%' });
+
 /*=============================================
                     NAVBAR
 ===============================================*/
