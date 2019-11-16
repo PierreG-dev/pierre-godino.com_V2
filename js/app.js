@@ -189,26 +189,57 @@ var animation = setInterval(headerAnimation, 10000);
 function portfolioUpdate() {
     let portfolioContainer = document.querySelector('.portfolio .container .row');
     portfolioContainer.innerHTML = '';
+    let sizeRegulator = 0;
 
     for (let i = 0; i < portfolioData.length; ++i) {
         switch (language) {
             case 1: //anglais
-                portfolioContainer.innerHTML += `<a href="${portfolioData[i].href}">
-                                                    <div class="card col-sm-12 col-md-6 col-lg-6" style="background-image: url(${portfolioData[i].img_src});">
-                                                        <p class="timestamp">${portfolioData[i].timestamp}</p>
-                                                        <h4>${portfolioData[i].english}</h4>
-                                                    </div>
-                                                 </a>`;
-                                                 break;
-            
+                if (i % 2 != 0) {
+                    portfolioContainer.innerHTML += `<div class="col-sm-0 col-md-1 col-lg-1"></div>`;
+                    sizeRegulator = (sizeRegulator + 1) % 2;
+                }
+                if(sizeRegulator == 1)
+                    portfolioContainer.innerHTML += `<a href="${portfolioData[i].href}">
+                                                        <div class="col-sm-12 col-md-5 col-lg-5 box">
+                                                            <h4>${portfolioData[i].english}</h4>
+                                                            <img src="${portfolioData[i].img_src}">
+                                                        </div>
+                                                     </a>`;
+                else
+                    portfolioContainer.innerHTML += `<a href="${portfolioData[i].href}">
+                                                        <div class="col-sm-12 col-md-6 col-lg-6 box">
+                                                            <h4>${portfolioData[i].english}</h4>
+                                                            <img src="${portfolioData[i].img_src}">
+                                                        </div>
+                                                     </a>`;
+                //console.log(sizeRegulator);
+                
+                break;
+
             default: //francais
-                portfolioContainer.innerHTML += `<a href="${portfolioData[i].href}">
-                                                <div class="card col-sm-12 col-md-6 col-lg-6" style="background-image: url(${portfolioData[i].img_src});">
-                                                    <p class="timestamp">${portfolioData[i].timestamp}</p>
-                                                    <h4>${portfolioData[i].francais}</h4>
-                                                </div>
-                                             </a>`;
-                                             break;
+                if (i % 2 != 0) {
+                    portfolioContainer.innerHTML += `<div class="col-sm-0 col-md-1 col-lg-1 "></div>`;
+                    sizeRegulator = (sizeRegulator + 1) % 2;
+                    console.log(i);
+                }
+                if (sizeRegulator == 1)
+                    portfolioContainer.innerHTML += `<a href="${portfolioData[i].href}">
+                                                        <div class="col-sm-12 col-md-5 col-lg-5 box">
+                                                            <h4>${portfolioData[i].francais}</h4>
+                                                            <img src="${portfolioData[i].img_src}">
+                                                        </div>
+                                                     </a>`;
+                else
+                    portfolioContainer.innerHTML += `<a href="${portfolioData[i].href}">
+                                                        <div class="col-sm-12 col-md-6 col-lg-6 box">
+                                                            <h4>${portfolioData[i].francais}</h4>
+                                                            <img src="${portfolioData[i].img_src}">
+                                                        </div>
+                                                     </a>`;
+                
+                //console.log(sizeRegulator);
+                
+                break;
         }
     }
 

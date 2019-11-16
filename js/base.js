@@ -62,6 +62,27 @@ const portfolioData = [
         img_src: './res/Space.png',
         href: './res/CV/V1/index.html',
         timestamp: '05/2019'
+    },
+    {
+        francais: 'pierre-godino.com V1',
+        english: 'pierre-godino.com V1',
+        img_src: './res/Space.png',
+        href: './res/CV/V1/index.html',
+        timestamp: '05/2019'
+    },
+    {
+        francais: 'pierre-godino.com V1',
+        english: 'pierre-godino.com V1',
+        img_src: './res/Space.png',
+        href: './res/CV/V1/index.html',
+        timestamp: '05/2019'
+    },
+    {
+        francais: 'pierre-godino.com V1',
+        english: 'pierre-godino.com V1',
+        img_src: './res/Space.png',
+        href: './res/CV/V1/index.html',
+        timestamp: '05/2019'
     }
 ];
 
