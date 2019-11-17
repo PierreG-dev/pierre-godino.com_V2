@@ -766,6 +766,28 @@ footer .upperPart .logo img:hover {
     transform: scale3d(1.1,1.1,1);
 }
 
+footer .upperPart .footnav {
+    display: flex;
+    width: 400px;
+    height: 100%;
+    flex-direction: column;
+}
+footer .upperPart .footnav h4 {
+    color: white;
+    font-weight: 600;
+    font-size: 2rem;
+    margin: 10px auto;
+    margin-bottom: 20px;
+}
+footer .upperPart .footnav ul {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+footer .upperPart .footnav ul li {
+    list-style: none;
+}
 
 footer .lowerPart {
     background: #1b1b1b;
