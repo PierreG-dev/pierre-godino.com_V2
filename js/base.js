@@ -2,23 +2,28 @@
 const navbarData = [
     {
         francais: 'Accueil',
-        english: 'Home'
+        english: 'Home',
+        href_id: '#accueil'
     },
     {
         francais: 'Competences',
-        english: 'Skills'
+        english: 'Skills',
+        href_id: '#competences'
     },
     {
         francais: 'Portfolio',
-        english: 'Portfolio'
+        english: 'Portfolio',
+        href_id: '#portfolio'
     },
     {
         francais: 'A propos',
-        english: 'About'
+        english: 'About',
+        href_id: '#about'
     },
     {
         francais: 'Contact',
-        english: 'Contact'
+        english: 'Contact',
+        href_id: '#contact'
     }
 ];
 
@@ -42,41 +47,6 @@ const headerData = [
 
 //Différents sites du portfolio
 const portfolioData = [
-    {
-        francais: 'pierre-godino.com V1',
-        english: 'pierre-godino.com V1',
-        img_src: './res/Space.png',
-        href: './res/CV/V1/index.html',
-        timestamp: '05/2019'
-    },
-    {
-        francais: 'pierre-godino.com V1',
-        english: 'pierre-godino.com V1',
-        img_src: './res/Space.png',
-        href: './res/CV/V1/index.html',
-        timestamp: '05/2019'
-    },
-    {
-        francais: 'pierre-godino.com V1',
-        english: 'pierre-godino.com V1',
-        img_src: './res/Space.png',
-        href: './res/CV/V1/index.html',
-        timestamp: '05/2019'
-    },
-    {
-        francais: 'pierre-godino.com V1',
-        english: 'pierre-godino.com V1',
-        img_src: './res/Space.png',
-        href: './res/CV/V1/index.html',
-        timestamp: '05/2019'
-    },
-    {
-        francais: 'pierre-godino.com V1',
-        english: 'pierre-godino.com V1',
-        img_src: './res/Space.png',
-        href: './res/CV/V1/index.html',
-        timestamp: '05/2019'
-    },
     {
         francais: 'pierre-godino.com V1',
         english: 'pierre-godino.com V1',

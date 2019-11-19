@@ -41,12 +41,11 @@ function navbarUpdate() {
     for (let i = 0; i < navbarData.length; ++i) {
         switch (language) {
             case 1: // cas 1
-                navbarList.innerHTML += `<li class="navbar_element">${navbarData[i].english}</li>`
+                navbarList.innerHTML += `<li><a href="${navbarData[i].href_id}" class="navbar_element">${navbarData[i].english}</a></li>`
                 break;
 
             default: // cas 0
-                navbarList.innerHTML += `<li class="navbar_element">${navbarData[i].francais}</li>`
-                break;
+                navbarList.innerHTML += `<li><a href="${navbarData[i].href_id}" class="navbar_element">${navbarData[i].francais}</a></li>`
         }
     }
     return 0;
