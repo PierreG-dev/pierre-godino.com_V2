@@ -20,7 +20,7 @@ function updateAll() {
                 FONCTIONNALITES
 ===============================================*/
 
-/* WAYPOINTS*/
+/* WAYPOINTS */
 var $skillsEVT = $('.competences');
 
 $skillsEVT.waypoint(function (direction) {
@@ -30,6 +30,15 @@ $skillsEVT.waypoint(function (direction) {
 
     
 }, { offset: '50%' });
+
+/* PARALLAX */
+var image_para = document.getElementsByClassName('thumbnail');
+new simpleParallax(image_para, {
+    scale: 1.4,
+    orientation: 'down',
+    transition: 'cubic-bezier(0,0,0,1)',
+    delay: .0
+});
 
 /*=============================================
                     NAVBAR
