@@ -35,7 +35,7 @@ body {
     height: 10vh;
     background: rgb(40, 40, 40, 0.65);
     margin-top: 7vh;
-    z-index: 2;
+    z-index: 5;
     display: flex;
     overflow: hidden;
     position: sticky;
@@ -353,6 +353,11 @@ header .container .mainContainer .main_element .description {
     background: var(--footer-color);
     padding: 20px;
 }
+.portfolio hr {
+    margin: 25px 0;
+    border-color: var(--lighty-white);
+    width: 90%;
+}
 
 .portfolio .titre {
     display: flex;
@@ -366,22 +371,27 @@ header .container .mainContainer .main_element .description {
 .portfolio h2::after {
     display: block;
     content: "";
-    left: 0;
-    width: 40px;
-    height: 5px;
-    float: top;
+    width: 20px;
+    height: 20px;
+    margin-top: -10px;
+    margin-left: -15px;
     border-radius: 2px;
-    background: white;
+    border-left: 5px solid var(--bloody-red);
+    border-bottom: 5px solid var(--bloody-red);
+    background: none;
 }
 .portfolio h2::before {
     position: absolute;
-    margin-top: -5px;
+    margin-top: -8px;
+    margin-right: -15px;
+    border-right: 5px solid var(--bloody-red);
+    border-top: 5px solid var(--bloody-red);
     right: 0;
     content: "";
-    width: 40px;
-    height: 5px;
+    width: 20px;
+    height: 20px;
     border-radius: 2px;
-    background: white;    
+    background: none;    
 }
 
 .portfolio .container {
@@ -402,7 +412,9 @@ header .container .mainContainer .main_element .description {
 
 .portfolio .box img {
     position: absolute;
-    width: 100%;
+    width: 140%;
+    left: -20%;
+    top: -20%;
     height: auto;
     animation: 10s boxHoverAnimation infinite ease-in-out;
     animation-play-state: paused;
@@ -450,7 +462,7 @@ header .container .mainContainer .main_element .description {
 /* ----------------- Partie Compétences informatiques ----------------- */
 .competences {
     background: var(--footer-color);
-    padding: 10px;
+    padding: 20px;
     margin-bottom: 200px;
     margin-top: 80vh;
     z-index: -1;
@@ -459,11 +471,16 @@ header .container .mainContainer .main_element .description {
     -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
     box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
 }
+.competences hr {
+    width: 90%;
+    border-color: var(--lighty-white);
+    margin: 25px auto;
+}
 .navbar_fix {
     margin-top: 83vh;
 }
 
-h2 {
+.competences h2 {
     color: white;
     opacity: 0.8;
     font-size: 3rem;
@@ -471,6 +488,10 @@ h2 {
     text-align: center;
     margin-top: -1px;
     margin-bottom: 1px
+}
+.competences h2 span {
+    color: var(--bloody-red);
+    font-size: 3rem;
 }
 
 .competences .container {
@@ -693,6 +714,7 @@ h2 {
     font-weight: 600;
     font-size: 3rem;
     margin-bottom: 10px;
+    text-align: center;
 }
 .contact hr {
     border-color: var(--carbon-dark);
@@ -704,14 +726,20 @@ h2 {
     display: flex;
     justify-content: space-between;
 }
-.contact .container .mapBox {
+.contact .container .leftContainer {
     width: 50%;
-    height: 690px;
+}
+.contact .container .mapBox {
+    width: 100%;
+    height: 350px;
     overflow: hidden;
     -webkit-box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.5);
     -moz-box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.5);
     box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.5);
 }
+
+
+
 .contact .container .infoBox {
     width: 250px;
     margin: auto 0;
