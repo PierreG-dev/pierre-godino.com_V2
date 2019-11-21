@@ -506,11 +506,11 @@ header .container .mainContainer .main_element .description {
     font-size: 3rem;
 }
 
-.competences .container {
+.competences .informatique .container {
     width: 100%;
     max-width: 1000px;
 }
-.competences .container .skillColumn {
+.competences .informatique .container .skillColumn {
     height: 100px;
     width: 700px;
     margin: 5px auto;
@@ -523,7 +523,7 @@ header .container .mainContainer .main_element .description {
     animation-fill-mode: forwards;
     animation-direction: normal;
 }
-.competences .container .skillColumn .skillCategory {
+.competences .informatique .container .skillColumn .skillCategory {
     background: var(--carbon-dark);
     border-radius: 5px 0 0 5px;
     width: 200px;
@@ -539,7 +539,7 @@ header .container .mainContainer .main_element .description {
     -moz-box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.5);
     box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.5);
 }
-.competences .container .skillColumn .skillDetail {
+.competences .informatique .container .skillColumn .skillDetail {
     background: rgb(70, 70, 70, 0.30);
     height: 100%;
     width: calc(100% - 50px);
@@ -555,12 +555,12 @@ header .container .mainContainer .main_element .description {
     box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.5);
     transform: translate3d(-100%,0,0);
 }
-.competences .container .skillColumn .skillDetail img {
+.competences .informatique .container .skillColumn .skillDetail img {
     width: 70px;
     height: auto;
     margin: 0 10px;
 }
-.competences .container .skillColumn .skillUnder {
+.competences .informatique .container .skillColumn .skillUnder {
     width: 25px;
     border-radius: 0 5px 5px 0;
     animation-fill-mode: forwards;
@@ -572,31 +572,28 @@ header .container .mainContainer .main_element .description {
 
 
 
-.competences .skillDisplayAnimation {
+.competences .informatique .skillDisplayAnimation {
     animation: 0.5s skillSlideDown ease;
 }
 
-.competences .skillDisplayAnimationUnder {
+.competences .informatique .skillDisplayAnimationUnder {
     animation: 0.5s skillSlideDownUnder ease;
 }
 
-.competences .shadowRisingAnimation {
+.competences .informatique .shadowRisingAnimation {
     animation: 0.5s shadowRising ease;
 }
 
 
 
 @media (max-width: 767px) {
-    .competences {
+    .competences .informatique {
         background: var(--footer-color);
         padding: 1px;
         margin-bottom: 200px;
         z-index: -1;
-        -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
-        -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
-        box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
     }
-    .competences .container {
+    .competences .informatique .container {
         width: 100%;
         max-width: 1000px;
         display: flex;
@@ -604,7 +601,7 @@ header .container .mainContainer .main_element .description {
         justify-content: center;
         padding: 0;
     }
-    .competences .container .skillColumn {
+    .competences .informatique .container .skillColumn {
         height: 40px;
         width: 325px;
         margin: 5px auto;
@@ -617,7 +614,7 @@ header .container .mainContainer .main_element .description {
         animation-fill-mode: forwards;
         animation-direction: normal;
     }
-    .competences .container .skillColumn .skillCategory {
+    .competences .informatique .container .skillColumn .skillCategory {
         background: var(--carbon-dark);
         border-radius: 5px 0 0 5px;
         width: 50px;
@@ -633,7 +630,7 @@ header .container .mainContainer .main_element .description {
         -moz-box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.5);
         box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.5);
     }
-    .competences .container .skillColumn .skillDetail {
+    .competences .informatique .container .skillColumn .skillDetail {
         background: rgb(70, 70, 70, 0.30);
         height: 100%;
         width: calc(100% - 50px);
@@ -648,21 +645,21 @@ header .container .mainContainer .main_element .description {
         -moz-box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.5);
         box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.5);
     }
-    .competences .container .skillColumn .skillDetail img {
+    .competences .informatique .container .skillColumn .skillDetail img {
         width: 28px;
         height: auto;
         margin: 0 10px;
     }
-    .competences .container .skillColumn .skillUnder {
+    .competences .informatique .container .skillColumn .skillUnder {
         width: 13px;
         border-radius: 0 5px 5px 0;
         animation-fill-mode: forwards;
         animation-direction: normal;
-        z-index: -1;
+        z-index: 0;
         box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.5);
     }
 
-    .competences .skillDisplayAnimationUnder {
+    .competences .informatique .skillDisplayAnimationUnder {
         animation: 0.5s skillSlideDownUnderLittle ease;
     }
     @keyframes skillSlideDownUnderLittle {
@@ -702,14 +699,33 @@ header .container .mainContainer .main_element .description {
     margin: 0 auto;
 }
 .competences figure img {
-    width: 400px;
+    width: 300px;
     height: auto;
     margin: auto;
     border-radius: 4px;
 }
+.competences .responsive,.design,.informatique {
+    width: 70%;
+    margin: 25px auto;
+    margin-bottom: 100px;
+}
+.competences h3 {
+    text-align: center;
+    color: var(--lighty-white) !important;
+    font-weight: 600;
+}
+.competences h3 span {
+    color: var(--bloody-red);
+}
+
 /*=============================================
                     A PROPOS
 ===============================================*/
+
+.about {
+    padding: 25px;
+    background: var(--footer-color);
+}
 
 /*=============================================
                     CONTACT

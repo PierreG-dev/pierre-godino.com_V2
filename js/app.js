@@ -21,9 +21,9 @@ function updateAll() {
 ===============================================*/
 
 /* WAYPOINTS */
-var $skillsEVT = $('.competences');
+var $skillsDisplayEVT = $('.informatique');
 
-$skillsEVT.waypoint(function (direction) {
+$skillsDisplayEVT.waypoint(function (direction) {
     $('.skillDetail').addClass('skillDisplayAnimation');
     $('.skillUnder').addClass('skillDisplayAnimationUnder');
     $('.skillColumn').addClass('shadowRisingAnimation');
