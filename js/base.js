@@ -53,6 +53,13 @@ const portfolioData = [
         img_src: './res/Space.png',
         href: './res/CV/V1/index.html',
         timestamp: '05/2019'
+    },
+    {
+        francais: 'pierre-godino.com V2',
+        english: 'pierre-godino.com V2',
+        img_src: './res/pierregodino.comV2thumbnail.jpg',
+        href: '#accueil',
+        timestamp: '11/2019'
     }
 ];
 
