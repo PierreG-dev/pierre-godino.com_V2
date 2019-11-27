@@ -42,8 +42,13 @@ new simpleParallax(image_para, {
 
 /* LOADING SCREEN */
 function displaySite() {
-    document.querySelector('.loadingScreen').style.opacity = '0';
-    document.body.style.overflowY = "visible";
+    let evt = setTimeout(function() {
+        document.querySelector('.loadingScreen').style.opacity = '0';
+        document.body.style.overflowY = "visible";
+        let evt2 = setTimeout(function () { document.querySelector('.loadingScreen').style.display = 'none'; }, 1000)
+    }, 1500);
+    
+
 }
 
 window.onload = displaySite;
