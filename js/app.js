@@ -40,6 +40,14 @@ new simpleParallax(image_para, {
     delay: .0
 });
 
+/* LOADING SCREEN */
+function displaySite() {
+    document.querySelector('.loadingScreen').style.opacity = '0';
+    document.body.style.overflowY = "visible";
+}
+
+window.onload = displaySite;
+
 /*=============================================
                     NAVBAR
 ===============================================*/
