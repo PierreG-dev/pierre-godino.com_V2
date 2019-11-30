@@ -336,9 +336,34 @@ skillsUpdate();
 
 const contactInfobox = document.querySelector('.infoBox');
 
-function contactUpdate() {
-
+function hrSupplier(i) {
+    if (i == 0)
+        return '';
+    return '<hr>'
 }
+
+function contactUpdate() {
+    contactInfobox.innerHTML = '';
+
+    for(let i =0; i < contactData.length; ++i) {
+        switch(language) {
+            case 1: //anglais
+                contactInfobox.innerHTML += `${hrSupplier(i)}
+                                             <h5>${contactData[i].english[0]}</h5>
+                                             <a href="${contactData[i].href}" target="_blank">${contactData[i].english[1]}</a>`;
+                break;
+                
+
+            default: //francais
+                contactInfobox.innerHTML += `${hrSupplier(i)}
+                                             <h5>${contactData[i].francais[0]}</h5>
+                                             <a href="${contactData[i].href}" target="_blank">${contactData[i].francais[1]}</a>`;
+                break;
+        }
+    }
+}
+
+contactUpdate();
 
 /*=============================================
                      FOOTER
