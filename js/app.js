@@ -190,10 +190,10 @@ function headerSetup() {
         switch (language) {
             case 1: // anglais
                 headerContent.innerHTML += `<div class="main_element">
-                                                <div class="title">
+                                                <h5 class="title">
                                                     ${headerData[i].english[0]}
                                                 </div>
-                                                <div class="description">
+                                                <p class="description">
                                                     ${headerData[i].english[1]}
                                                 </div>
                                             </div>`;
@@ -201,12 +201,12 @@ function headerSetup() {
 
             default: // francais
                 headerContent.innerHTML += `<div class="main_element">
-                                                <div class="title">
+                                                <h5 class="title">
                                                     ${headerData[i].francais[0]}
-                                                </div>
-                                                <div class="description">
+                                                </h5>
+                                                <p class="description">
                                                     ${headerData[i].francais[1]}
-                                                </div>
+                                                </p>
                                             </div>`;
                 break;
         }
