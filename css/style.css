@@ -226,6 +226,10 @@ body {
     visibility: hidden;
 }
 
+.navbar hr {
+    display: none;
+}
+
 @media (max-width: 767px) {
     .navbar {
         margin: 0;
@@ -239,6 +243,10 @@ body {
         height: 100%;
         transition: 0.3s ease-out;
     }
+
+    .navbar hr {
+    display: block;
+}
     
     .navbar .navbar_right {
         margin-top: 8vh;
@@ -247,10 +255,11 @@ body {
     .navbar .navbar_right ul {
         margin: 0 auto;
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
     }
     .navbar .navbar_right ul li {
         margin: -15px;
+        align-self: center;
     }
     .navbar .navbar_right ul li::after {
         display:none;
