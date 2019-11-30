@@ -13,6 +13,7 @@ function updateAll() {
     portfolioUpdate();
     skillsUpdate();
     contactUpdate();
+    footerUpdate();
     return 0;
 }
 
@@ -52,8 +53,26 @@ function displaySite() {
     
 
 }
-
 window.onload = displaySite;
+
+/* LANGUAGE */
+const languageBtn = document.querySelector('.navbar_language');
+const languageflags = document.querySelector('.navbar .flags');
+languageBtn.onclick = languageSwitch;
+function languageSwitch() {
+    switch(language) {
+        case 1: //anglais
+            languageflags.style.transform = 'translate3d(0,0,0)';
+            language = 0;
+            updateAll();
+            break;
+        default: //francais
+            languageflags.style.transform = 'translate3d(0,-50%,0)';
+            language = 1;
+            updateAll();
+            break;
+    }
+}
 
 /*=============================================
                     NAVBAR
@@ -62,6 +81,7 @@ const navbarList = document.querySelector('#navbar_list');
 
 //Met à jour la langue de la navbar
 function navbarUpdate() {
+    navbarList.innerHTML = '';
     for (let i = 0; i < navbarData.length; ++i) {
         switch (language) {
             case 1: // cas 1
