@@ -336,3 +336,30 @@ skillsUpdate();
 /*=============================================
                      FOOTER
 ===============================================*/
+
+const footerNav = document.querySelector('footer .footnav ul');
+const footerLegalMentions = document.querySelector('footer .lowerPart a .legal');
+
+function footerUpdate() {
+    footerNav.innerHTML = '';
+
+    for(let i = 0; i < navbarData.length; ++i) {
+        switch(language) {
+
+            case 1: //anglais
+                footerNav.innerHTML += `<li><a href="${navbarData[i].href_id}" class="footerElement">${navbarData[i].english}</a></li>`;
+            
+            default: //francais
+                footerNav.innerHTML += `<li><a href="${navbarData[i].href_id}" class="footerElement">${navbarData[i].francais}</a></li>;`
+        }
+    }
+
+    switch(language) {
+        case 1: //anglais
+            footerLegalMentions.innerHTML = legalData.english;
+        default: //francais
+            footerLegalMentions.innerHTML = legalData.francais;
+    }
+}
+
+footerUpdate();

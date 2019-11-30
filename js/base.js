@@ -137,4 +137,10 @@ const skillData = [
         img_alt: "logo Algorithmie",
         category: "dev-ops"
     }
-]
+];
+
+//Language mentions legales
+const legalData = {
+        francais: 'MENTIONS LEGALES',
+        english: 'LEGAL MENTIONS'
+};
