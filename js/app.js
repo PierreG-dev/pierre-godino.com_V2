@@ -4,13 +4,14 @@
 
 // 0-> fr
 // 1 -> en
-var language = 0;
+var language = 1;
 var headerState = 0;
 
 function updateAll() {
     navbarUpdate();
     headerUpdate();
     portfolioUpdate();
+    contactUpdate();
     return 0;
 }
 
@@ -333,6 +334,12 @@ skillsUpdate();
                     CONTACT
 ===============================================*/
 
+const contactInfobox = document.querySelector('.infoBox');
+
+function contactUpdate() {
+
+}
+
 /*=============================================
                      FOOTER
 ===============================================*/
@@ -348,17 +355,21 @@ function footerUpdate() {
 
             case 1: //anglais
                 footerNav.innerHTML += `<li><a href="${navbarData[i].href_id}" class="footerElement">${navbarData[i].english}</a></li>`;
+                break;
             
             default: //francais
-                footerNav.innerHTML += `<li><a href="${navbarData[i].href_id}" class="footerElement">${navbarData[i].francais}</a></li>;`
+                footerNav.innerHTML += `<li><a href="${navbarData[i].href_id}" class="footerElement">${navbarData[i].francais}</a></li>`;
+                break;
         }
     }
 
     switch(language) {
         case 1: //anglais
             footerLegalMentions.innerHTML = legalData.english;
+            break;
         default: //francais
             footerLegalMentions.innerHTML = legalData.francais;
+            break;
     }
 }
 

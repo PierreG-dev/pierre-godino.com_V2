@@ -139,7 +139,41 @@ const skillData = [
     }
 ];
 
-//Language mentions legales
+//ressources Contact
+const contactData = [
+    {
+        francais: ['Emplacement', 'Toulouse'],
+        english: ['Location', 'Toulouse'],
+        href: 'https://www.google.fr/maps/place/Toulouse'
+    },
+    {
+        francais: ['Email', 'pierregodino.contact@yahoo.com'],
+        english: ['Email', 'pierregodino.contact@yahoo.com'],
+        href: 'mailto:pierregodino.contact@yahoo.com'
+    },
+    {
+        francais: ['Téléphone', '+33.6.51.71.04.97'],
+        english: ['Phone', '+33.6.51.71.04.97'],
+        href: 'tel:+33651710497'
+    },
+    {
+        francais: ['LinkedIn', 'Accéder à LinkedIn'],
+        english: ['LinkedIn', 'Access to LinkedIn'],
+        href: 'https://www.linkedin.com/in/pierre-godino-50b503186'
+    },
+    {
+        francais: ['Malt', 'Accéder à MALT'],
+        english: ['Malt', 'Access to malt'],
+        href: 'https://www.malt.fr/profile/pierregodino'
+    },
+    {
+        francais: ['S.I.R.E.N.', '850 759 762'],
+        english: ['S.I.R.E.N.', '850 759 762'],
+        href: 'https://www.societe.com/societe/monsieur-pierre-godino-850759762.html'
+    }
+];
+
+//ressources mentions legales
 const legalData = {
         francais: 'MENTIONS LEGALES',
         english: 'LEGAL MENTIONS'
