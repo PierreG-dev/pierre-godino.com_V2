@@ -11,6 +11,7 @@ function updateAll() {
     navbarUpdate();
     headerUpdate();
     portfolioUpdate();
+    skillsUpdate();
     contactUpdate();
     return 0;
 }
@@ -270,13 +271,13 @@ portfolioUpdate();
 /*=============================================
                    COMPETENCES
 ===============================================*/
-//var imgHauteur = '' + $('header img').height() * 0.5875 + 'px';
-//document.querySelector('.competences').style.marginTop = imgHauteur;
 
 const skillsContent = document.querySelectorAll('.skillDetail');
+const skillText = document.querySelectorAll('.textBox');
 
 function skillsUpdate() {
 
+    /* ---------- IT PART ---------- */
     for (let i = 0; i < skillsContent.length; ++i) {
         skillsContent[i].innerHTML = '';
     }
@@ -323,6 +324,22 @@ function skillsUpdate() {
                 break;
         }
     }
+
+
+    /* ---------- TEXTUAL PART ---------- */
+    for(let i = 0; i < skillTextData.length; ++i) {
+        switch(language) {
+            case 1: //anglais
+                
+                break;
+
+            default: //francais
+
+                break;
+        }
+    }
+
+
 }
 
 skillsUpdate();
