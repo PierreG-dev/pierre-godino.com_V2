@@ -9,6 +9,7 @@ var headerState = 0;
 
 function updateAll() {
     navbarUpdate();
+    titlesUpdate();
     headerUpdate();
     portfolioUpdate();
     skillsUpdate();
@@ -71,6 +72,37 @@ function languageSwitch() {
             language = 1;
             updateAll();
             break;
+    }
+}
+
+/* TITRES DE SECTION */
+const titleSkills = document.querySelector('.competences h2');
+const titleDesign = document.querySelector('.design h3');
+const titleResponsive = document.querySelector('.responsive h3');
+const titleComputing = document.querySelector('.informatique h3');
+const titlePortfolio = document.querySelector('.portfolio h2');
+const titleContact = document.querySelector('.contact h2');
+
+function titlesUpdate() {
+    switch(language) {
+        case 1: //anglais
+            titleSkills.innerHTML = `<span><i class="fa fa-cogs" aria-hidden="true"></i></span> ${titleData[0].english[0]}`;
+            titleDesign.innerHTML = `<span><i class="fa fa-paint-brush" aria-hidden="true"></i></span> ${titleData[0].english[1]}`;
+            titleResponsive.innerHTML = `<span><i class="fa fa-desktop" aria-hidden="true"></i></span> ${titleData[0].english[2]}`;
+            titleComputing.innerHTML = `<span><i class="fa fa-terminal" aria-hidden="true"></i></span> ${titleData[0].english[3]}`;
+            titlePortfolio.innerHTML = `${titleData[1].english}`;
+            titleContact.innerHTML = `${titleData[2].english}`;
+            break;
+
+        default: //francais
+            titleSkills.innerHTML = `<span><i class="fa fa-cogs" aria-hidden="true"></i></span> ${titleData[0].francais[0]}`;
+            titleDesign.innerHTML = `<span><i class="fa fa-paint-brush" aria-hidden="true"></i></span> ${titleData[0].francais[1]}`;
+            titleResponsive.innerHTML = `<span><i class="fa fa-desktop" aria-hidden="true"></i></span> ${titleData[0].francais[2]}`;
+            titleComputing.innerHTML = `<span><i class="fa fa-terminal" aria-hidden="true"></i></span> ${titleData[0].francais[3]}`;
+            titlePortfolio.innerHTML = `${titleData[1].francais}`;
+            titleContact.innerHTML = `${titleData[2].francais}`;
+            break;
+
     }
 }
 
@@ -143,6 +175,7 @@ $navbar.waypoint(function(direction) {
 ===============================================*/
 const headerContent = document.querySelector('.mainContainer');
 
+
 //Mise en place des images de fond
 function headerBackgroundSetup() {
     for(let i = 0; i < headerData.length; ++i) {
@@ -151,7 +184,7 @@ function headerBackgroundSetup() {
 }
 
 //Met à jour la langue du header
-function headerUpdate() {
+function headerSetup() {
     headerContent.innerHTML = '';
     for (let i = 0; i < headerData.length; ++i) {
         switch (language) {
@@ -163,7 +196,7 @@ function headerUpdate() {
                                                 <div class="description">
                                                     ${headerData[i].english[1]}
                                                 </div>
-                                            </div>`
+                                            </div>`;
                 break;
 
             default: // francais
@@ -174,7 +207,7 @@ function headerUpdate() {
                                                 <div class="description">
                                                     ${headerData[i].francais[1]}
                                                 </div>
-                                            </div>`
+                                            </div>`;
                 break;
         }
     }
@@ -220,10 +253,34 @@ function headerAnimation() {
     return 0;
 }
 
-headerUpdate();
+
+headerSetup();
 headerBackgroundSetup();
 headerAnimationSetup()
 var animation = setInterval(headerAnimation, 10000);
+
+const headerTitles = document.querySelectorAll('.main_element .title');
+const headerDescription = document.querySelectorAll('.main_element .description');
+//Change le language du header
+function headerUpdate() {
+    for(let i = 0; i < headerData.length; ++i) {
+        headerTitles[i].innerHTML = '';
+        headerDescription[i].innerHTML = '';
+        switch(language) {
+            case 1: //anglais
+                headerTitles[i].innerHTML = `${headerData[i].english[0]}`;
+                headerDescription[i].innerHTML = `${headerData[i].english[1]}`;
+                break;
+            default: //francais
+                headerTitles[i].innerHTML = `${headerData[i].francais[0]}`;
+                headerDescription[i].innerHTML = `${headerData[i].francais[1]}`;
+                break;
+
+        }
+    }
+}
+
+
 
 /*=============================================
                     PORTFOLIO
@@ -263,7 +320,6 @@ function portfolioUpdate() {
                 if (i % 2 != 0) {
                     portfolioContainer.innerHTML += `<div class="col-sm-0 col-md-1 col-lg-1 "></div>`;
                     sizeRegulator = (sizeRegulator + 1) % 2;
-                    console.log(i);
                 }
                 if (sizeRegulator == 1)
                     portfolioContainer.innerHTML += `<a href="${portfolioData[i].href}">

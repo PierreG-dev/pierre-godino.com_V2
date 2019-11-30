@@ -27,6 +27,22 @@ const navbarData = [
     }
 ];
 
+//Ressources pour les titres de section
+const titleData = [
+    {
+        francais: ['Compétences', 'Design', 'Responsive', 'Informatique'],
+        english: ['Skills', 'Design', 'Responsive', 'Computing']
+    },
+    {
+        francais: 'Portfolio',
+        english: 'Portfolio'
+    },
+    {
+        francais: 'Contact',
+        english: 'Contact'
+    }
+]
+
 //Milieu du header
 const headerData = [
     {
