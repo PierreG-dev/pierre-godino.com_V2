@@ -424,7 +424,6 @@ header .container .mainContainer .main_element .description {
         color: var(--lighty-white);
         font-size: 2.5rem;
         font-weight: 600;
-        align-self: center;
     }
 
     header .container .mainContainer .main_element .description {
@@ -433,7 +432,7 @@ header .container .mainContainer .main_element .description {
         font-weight: 400;
     }
     header .container .mainContainer .main_element {
-        margin-top: -250px;
+        margin-top: -550px;
     }
 }
 
@@ -851,6 +850,36 @@ header .container .mainContainer .main_element .description {
     font-weight: 600;
     color: var(--bloody-red);
 }
+
+@media (max-width: 767px) {
+
+    .competences {
+        padding-bottom: 40px;
+        margin-top: 25vh;
+    }
+
+    .competences .informatique {
+        margin-bottom: 0;
+    }
+
+    .competences .responsive,.design,.informatique {
+        margin-bottom: 0;
+    }
+
+    .competences figure {
+        flex-direction: column;
+    }
+    .competences figure .imgContainer {
+        height: 50px;
+        overflow: hidden;
+        border-radius: 15px;
+    }
+    .competences figure .imgContainer img {
+       width: 100%;
+       margin-top: -40%;
+    }
+}
+
 
 /*=============================================
                     A PROPOS
