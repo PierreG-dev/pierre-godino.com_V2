@@ -143,15 +143,11 @@ const skillTextData = [
     {
         francais: ['Un Design User Friendly', " pour faciliter l'utilisation et l'accès à l'information"],
         english: ['User Friendly Design', "in order to facilitate the use and access to information"],
-        img_src: 'res/designPhoto.png',
-        img_alt: "deux crayons de couleurs"
     },
     {
         francais: ['Media Queries, Bootstrap,', " autant d'outils que j'utilise pour garantir une adaptabilité à tous types d'écrans pour mes créations"],
-        english: ['UMedia Queries, Bootstrap,', " as many tools that I use to ensure adaptability to all types of screens for my creations"],
-        img_src: 'res/responsivePhoto.jpg',
-        img_alt: "trois appareils connectés avec une taille d'écran différente"
-    },
+        english: ['Media Queries, Bootstrap,', " as many tools that I use to ensure adaptability to all types of screens for my creations"],
+    }
 ]
 
 //ressources Contact

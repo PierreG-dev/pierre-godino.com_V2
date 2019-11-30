@@ -4,7 +4,7 @@
 
 // 0-> fr
 // 1 -> en
-var language = 1;
+var language = 0;
 var headerState = 0;
 
 function updateAll() {
@@ -273,13 +273,16 @@ portfolioUpdate();
 ===============================================*/
 
 const skillsContent = document.querySelectorAll('.skillDetail');
-const skillText = document.querySelectorAll('.textBox');
+const skillText = document.querySelectorAll('.competences .textBox');
 
 function skillsUpdate() {
 
     /* ---------- IT PART ---------- */
     for (let i = 0; i < skillsContent.length; ++i) {
         skillsContent[i].innerHTML = '';
+    }
+    for (let i = 0; i < skillText.length; ++i) {
+        skillText[i].innerHTML = '';
     }
 
     for (let i = 0; i < skillData.length; ++i) {
@@ -330,11 +333,11 @@ function skillsUpdate() {
     for(let i = 0; i < skillTextData.length; ++i) {
         switch(language) {
             case 1: //anglais
-                
+                skillText[i].innerHTML += `<p><span>${skillTextData[i].english[0]}</span><br>${skillTextData[i].english[1]}<br></p>`;
                 break;
 
             default: //francais
-
+                skillText[i].innerHTML += `<p><span>${skillTextData[i].francais[0]}</span><br>${skillTextData[i].francais[1]}<br></p>`;
                 break;
         }
     }
