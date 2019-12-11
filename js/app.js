@@ -167,7 +167,7 @@ navBurger.onclick = function() {
     navbar.style.transform = 'translate3d(100%,0,0)';
     blackScreen.style.opacity = '0.8'
     blackScreen.style.cursor = 'pointer';
-    blackScreen.style.zIndex = '1';
+    blackScreen.style.zIndex = '3';
     document.body.style.overflowY = 'hidden';
 }
 
