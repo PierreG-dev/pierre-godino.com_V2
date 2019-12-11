@@ -106,6 +106,22 @@ function titlesUpdate() {
     }
 }
 
+
+/* MAIL */
+function mailRequest(_email=null, _content=null, _name=null) {
+    var url = 'php/mail.php';
+    $.post('php/mail.php',
+        {
+            name: name,
+            email: mailTo,
+            content: _content
+        }, function (data) {
+            alert(data);
+        });
+
+    }
+
+
 /*=============================================
                     NAVBAR
 ===============================================*/
