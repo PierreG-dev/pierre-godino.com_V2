@@ -184,7 +184,7 @@ $navbar.waypoint(function(direction) {
         $navbar.removeClass('reduced_navbar');
         $('.competences').removeClass('navbar_fix');
     }
-}, {offset:'7vh'});
+}, {offset:'6vh'});
 
 /*=============================================
                     HEADER

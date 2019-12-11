@@ -405,8 +405,8 @@ header .container {
 
 header .container img {
     position: absolute;
-    width: auto;
-    height: 140%;
+    width: 140%;
+    height: auto;
     top: -40%;
     left: 0;
     z-index: -2;
@@ -502,9 +502,8 @@ header .container .mainContainer .main_element .description {
 
 @media (max-width: 991px) {
     header .container img {
-        left: -500px;
-        width: auto;
-        height: 140%;
+        width: 140%;
+        height: auto;
     }
     
 }
