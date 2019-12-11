@@ -489,7 +489,6 @@ header .container .mainContainer .main_element .description {
         font-size: 2rem;
         font-weight: 600;
     }
-
     header .container .mainContainer .main_element .description {
         color: var(--lighty-white);
         font-size: 1.2rem;
@@ -498,13 +497,17 @@ header .container .mainContainer .main_element .description {
     header .container .mainContainer .main_element {
         top: 10%;
     }
+    header .container img {
+        width: 160%;
+        height: auto;
+        top: -10%;
+        left: -20%;
+    }
+    
 }
 
 @media (max-width: 991px) {
-    header .container img {
-        width: 140%;
-        height: auto;
-    }
+    
     
 }
 
