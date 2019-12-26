@@ -108,16 +108,12 @@ function titlesUpdate() {
 
 
 /* MAIL */
-function mailRequest(_email=null, _content=null, _name=null) {
-    var url = 'php/mail.php';
-    $.post('php/mail.php',
-        {
-            name: name,
-            email: mailTo,
-            content: _content
-        }, function (data) {
-            alert(data);
-        });
+const mailButton = document.querySelector('#mailBtn');
+const inputs = document.querySelectorAll('input');
+const contentArea = document.querySelector('textarea');
+mailButton.onclick = mailRequest
+function mailRequest() {
+    sendMail(0, inputs[0].value, inputs[1].value, inputs[2].value, contentArea.value)
 
     }
 
@@ -382,11 +378,11 @@ function skillsUpdate() {
             case "front-end" : 
                 switch(language) {
                     case 1: //anglais
-                        skillsContent[0].innerHTML += `<div><img src="${skillData[i].img_src}" alt="${skillData[i].english}"><span>${skillData[i].english}</span></div>`;
+                        skillsContent[0].innerHTML += `<div class="soloSkill"><img src="${skillData[i].img_src}" alt="${skillData[i].english}"><span>${skillData[i].english}</span></div>`;
                         break;
 
                     default: //francais
-                        skillsContent[0].innerHTML += `<div><img src="${skillData[i].img_src}" alt="${skillData[i].francais}"><span>${skillData[i].francais}</span></div>`;
+                        skillsContent[0].innerHTML += `<div class="soloSkill"><img src="${skillData[i].img_src}" alt="${skillData[i].francais}"><span>${skillData[i].francais}</span></div>`;
                         break;
                     
                 }
@@ -395,11 +391,11 @@ function skillsUpdate() {
             case "back-end" : 
                 switch(language) {
                     case 1: //anglais
-                        skillsContent[1].innerHTML += `<div><img src="${skillData[i].img_src}" alt="${skillData[i].english}"><span>${skillData[i].english}</span></div>`;
+                        skillsContent[1].innerHTML += `<div class="soloSkill"><img src="${skillData[i].img_src}" alt="${skillData[i].english}"><span>${skillData[i].english}</span></div>`;
                         break;
 
                     default: //francais
-                        skillsContent[1].innerHTML += `<div><img src="${skillData[i].img_src}" alt="${skillData[i].francais}"><span>${skillData[i].francais}</span></div>`;
+                        skillsContent[1].innerHTML += `<div class="soloSkill"><img src="${skillData[i].img_src}" alt="${skillData[i].francais}"><span>${skillData[i].francais}</span></div>`;
                         break;
                     
                 }
@@ -408,11 +404,11 @@ function skillsUpdate() {
             case "dev-ops" : 
                 switch(language) {
                     case 1: //anglais
-                        skillsContent[2].innerHTML += `<div><img src="${skillData[i].img_src}" alt="${skillData[i].english}"><span>${skillData[i].english}</span></div>`;
+                        skillsContent[2].innerHTML += `<div class="soloSkill"><img src="${skillData[i].img_src}" alt="${skillData[i].english}"><span>${skillData[i].english}</span></div>`;
                         break;
 
                     default: //francais
-                        skillsContent[2].innerHTML += `<div><img src="${skillData[i].img_src}" alt="${skillData[i].francais}"><span>${skillData[i].francais}</span></div>`;
+                        skillsContent[2].innerHTML += `<div class="soloSkill"><img src="${skillData[i].img_src}" alt="${skillData[i].francais}"><span>${skillData[i].francais}</span></div>`;
                         break;
                     
                 }
