@@ -9,7 +9,7 @@ function sendMail(e, _name, _phone, _mail, _content) {
             content: _content
         },
         success: function(result, status, xhr) {
-            // alert(result)
+            alert('Le message a bien été envoyé !')
         }
     })
 }

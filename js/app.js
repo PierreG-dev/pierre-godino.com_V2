@@ -7,6 +7,7 @@
 var language = 0;
 var headerState = 0;
 
+
 function updateAll() {
     navbarUpdate();
     titlesUpdate();
@@ -18,7 +19,27 @@ function updateAll() {
     return 0;
 }
 
+function createCookie(name, value, seconds) {
+    if (seconds) {
+        var expires = "; max-age=" + seconds;
+    } else var expires = "";
+    document.cookie = name + "=" + value + expires + "; path=/";
+}
 
+function readCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for (var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+    }
+    return null;
+}
+
+function eraseCookie(name) {
+    createCookie(name, "", -1);
+}
 
 /*=============================================
                 FONCTIONNALITES
@@ -113,9 +134,14 @@ const inputs = document.querySelectorAll('input');
 const contentArea = document.querySelector('textarea');
 mailButton.onclick = mailRequest
 function mailRequest() {
-    sendMail(0, inputs[0].value, inputs[1].value, inputs[2].value, contentArea.value)
+    if (inputs[3].value == "")
+        sendMail(0, inputs[0].value, inputs[1].value, inputs[2].value, contentArea.value);
+    for(let i = 0; i < 4; ++i) {inputs[i].value = "";}
+    contentArea.value = "";
+    blackScreenForm.click();
+    createCookie("mailProtect", 'active', 720);
+}
 
-    }
 
 
 /*=============================================
@@ -495,26 +521,6 @@ contactButton.onclick = () => {
 
 
 
-
-// blackScreenBS.onclick = function () {
-//     if (deployed == true) {
-//         navbar.style.transform = 'translate3d(0,0,0)';
-//         blackScreen.style.opacity = '0.3';
-//         navBurger.style.opacity = '1';
-//         blackScreen.style.zIndex = '-1';
-//         document.body.style.overflowY = 'visible';
-//         deployed = false;
-//     }
-// }
-// navBurger.onclick = function () {
-//     deployed = true;
-//     navBurger.style.opacity = '0';
-//     navbar.style.transform = 'translate3d(100%,0,0)';
-//     blackScreen.style.opacity = '0.8'
-//     blackScreen.style.cursor = 'pointer';
-//     blackScreen.style.zIndex = '3';
-//     document.body.style.overflowY = 'hidden';
-// }
 
 /*=============================================
                      FOOTER
