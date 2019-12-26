@@ -134,12 +134,19 @@ const inputs = document.querySelectorAll('input');
 const contentArea = document.querySelector('textarea');
 mailButton.onclick = mailRequest
 function mailRequest() {
-    if (inputs[3].value == "")
-        sendMail(0, inputs[0].value, inputs[1].value, inputs[2].value, contentArea.value);
-    for(let i = 0; i < 4; ++i) {inputs[i].value = "";}
-    contentArea.value = "";
-    blackScreenForm.click();
-    createCookie("mailProtect", 'active', 720);
+    if (!(readCookie("mailProtect") == "active")) {
+        if (inputs[3].value == "")
+            sendMail(0, inputs[0].value, inputs[1].value, inputs[2].value, contentArea.value);
+        for (let i = 0; i < 4; ++i) {
+            inputs[i].value = "";
+        }
+        contentArea.value = "";
+        blackScreenForm.click();
+        createCookie("mailProtect", 'active', 720);
+    }
+    else {
+        alert("Il est trop tôt pour envoyer un autre message !");
+    }
 }
 
 

@@ -29,6 +29,21 @@ body {
     box-shadow: 0px 0px 4px 0px black;
 }
 
+.formContact i {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    color: var(--footer-color);
+    font-size: 1.8rem;
+    transition: 0.2s;
+}
+
+.formContact i:hover {
+    color: var(--lighty-white);
+    opacity: 0.5;
+    cursor: pointer;
+}
+
 .formContact h4 {
     align-self: center;
     color: var(--lighty-white);
