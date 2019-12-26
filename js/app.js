@@ -382,11 +382,11 @@ function skillsUpdate() {
             case "front-end" : 
                 switch(language) {
                     case 1: //anglais
-                        skillsContent[0].innerHTML += `<img src="${skillData[i].img_src}" alt="">`;
+                        skillsContent[0].innerHTML += `<div><img src="${skillData[i].img_src}" alt="${skillData[i].english}"><span>${skillData[i].english}</span></div>`;
                         break;
 
                     default: //francais
-                        skillsContent[0].innerHTML += `<img src="${skillData[i].img_src}" alt="">`;
+                        skillsContent[0].innerHTML += `<div><img src="${skillData[i].img_src}" alt="${skillData[i].francais}"><span>${skillData[i].francais}</span></div>`;
                         break;
                     
                 }
@@ -395,11 +395,11 @@ function skillsUpdate() {
             case "back-end" : 
                 switch(language) {
                     case 1: //anglais
-                        skillsContent[1].innerHTML += `<img src="${skillData[i].img_src}" alt="">`;
+                        skillsContent[1].innerHTML += `<div><img src="${skillData[i].img_src}" alt="${skillData[i].english}"><span>${skillData[i].english}</span></div>`;
                         break;
 
                     default: //francais
-                        skillsContent[1].innerHTML += `<img src="${skillData[i].img_src}" alt="">`;
+                        skillsContent[1].innerHTML += `<div><img src="${skillData[i].img_src}" alt="${skillData[i].francais}"><span>${skillData[i].francais}</span></div>`;
                         break;
                     
                 }
@@ -408,11 +408,11 @@ function skillsUpdate() {
             case "dev-ops" : 
                 switch(language) {
                     case 1: //anglais
-                        skillsContent[2].innerHTML += `<img src="${skillData[i].img_src}" alt="">`;
+                        skillsContent[2].innerHTML += `<div><img src="${skillData[i].img_src}" alt="${skillData[i].english}"><span>${skillData[i].english}</span></div>`;
                         break;
 
                     default: //francais
-                        skillsContent[2].innerHTML += `<img src="${skillData[i].img_src}" alt="">`;
+                        skillsContent[2].innerHTML += `<div><img src="${skillData[i].img_src}" alt="${skillData[i].francais}"><span>${skillData[i].francais}</span></div>`;
                         break;
                     
                 }
@@ -476,6 +476,49 @@ function contactUpdate() {
 }
 
 contactUpdate();
+
+const contactButton = document.querySelector('.contactButton');
+const blackScreenForm = document.querySelector('#formBS');
+const form = document.querySelector('#formulaire');
+
+contactButton.onclick = () => {
+    form.style.display = "flex";
+    form.style.opacity = "1";
+    blackScreenForm.style.opacity = '0.8';
+    blackScreenForm.style.cursor = 'pointer';
+    blackScreenForm.style.zIndex = '12';
+    document.body.style.overflowY = 'hidden';
+    blackScreenForm.onclick = () => {
+            blackScreenForm.style.opacity = '0.3';
+            blackScreenForm.style.zIndex = '-1';
+            document.body.style.overflowY = 'visible';
+            form.style.display = "none";
+            form.style.opacity = "0";
+    }
+}
+
+
+
+
+// blackScreenBS.onclick = function () {
+//     if (deployed == true) {
+//         navbar.style.transform = 'translate3d(0,0,0)';
+//         blackScreen.style.opacity = '0.3';
+//         navBurger.style.opacity = '1';
+//         blackScreen.style.zIndex = '-1';
+//         document.body.style.overflowY = 'visible';
+//         deployed = false;
+//     }
+// }
+// navBurger.onclick = function () {
+//     deployed = true;
+//     navBurger.style.opacity = '0';
+//     navbar.style.transform = 'translate3d(100%,0,0)';
+//     blackScreen.style.opacity = '0.8'
+//     blackScreen.style.cursor = 'pointer';
+//     blackScreen.style.zIndex = '3';
+//     document.body.style.overflowY = 'hidden';
+// }
 
 /*=============================================
                      FOOTER

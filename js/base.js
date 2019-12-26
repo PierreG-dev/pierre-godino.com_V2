@@ -147,8 +147,8 @@ const skillData = [
         category: "dev-ops"
     },
     {
-        francais: "Algorithmie",
-        english: "Algorithmie",
+        francais: "Algorithms",
+        english: "Algorithms",
         img_src: "./res/algoLogo.png",
         img_alt: "logo Algorithmie",
         category: "dev-ops"

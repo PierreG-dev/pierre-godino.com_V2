@@ -1,9 +1,15 @@
+
 <?php
 
 
 
+    $to      = 'pierregodino.contact@yahoo.com';
+    $subject = 'Nouvelle demande de devis';
+    $message = $content;
+    $headers = array(
+        'From' => 'site@pierre-godino.com',
+    );
 
-    mail($myEmail, 'Demande de contact de ' . $name, $content, [$headers], [$parameters]);
-
+    mail($to, $subject, $message, $headers);
 
 ?>
