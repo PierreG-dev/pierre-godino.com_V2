@@ -173,7 +173,12 @@ function mailRequest() {
 
 
 /* COOKIE ALERT */
-
+const cookieAlertWindow = document.querySelector('#cookieAlert');
+const cookieAlertClose = document.querySelector('#cookieAlertClose');
+cookieAlertClose.onclick = () => {
+    console.log('test');
+    cookieAlertWindow.style.transform = "translate3d(0,100%,0)";
+}
 
 /*=============================================
                     NAVBAR

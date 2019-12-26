@@ -152,6 +152,9 @@ body {
     border: 0.1px solid var(--lighty-white);
     border-bottom: 0;
     z-index: 11;
+    transition: 0.5s;
+    transform: translate3d(0,0,0);
+
     -webkit-box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.5);
     -moz-box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.5);
     box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.5);
