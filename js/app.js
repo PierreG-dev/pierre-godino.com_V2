@@ -156,13 +156,34 @@ mailButton.onclick = mailRequest
 formClose.onclick = () => {
     blackScreenForm.click();
 }
+
+function inputsCheck() {
+    let state = true;
+    for(let i = 0; i < inputs.length - 1; ++i) {
+        inputs[i].style.boxShadow = "";
+        if (inputs[i].value == "") {
+            state = false;
+            inputs[i].style.boxShadow = "0px 0px 10px 0px red";
+        }
+    }
+    contentArea.style.boxShadow = "";
+    if (contentArea.value == "") {
+        state = false;
+        contentArea.style.boxShadow = "0px 0px 10px 0px red";
+    }
+
+    return state;
+}
+
 function mailRequest() {
     if (!(readCookie("mailProtect") == "active")) {
-        if (inputs[3].value == "")
-            sendMail(0, inputs[0].value, inputs[1].value, inputs[2].value, contentArea.value);
-        
-        blackScreenForm.click();
-        createCookie("mailProtect", 'active', 720);
+        if(inputsCheck()) {
+            if (inputs[3].value == "") {
+                sendMail(0, inputs[0].value, inputs[1].value, inputs[2].value, contentArea.value);
+                blackScreenForm.click();
+                createCookie("mailProtect", 'active', 720);
+            }
+        }
     }
     else {
         alert("Il est trop tôt pour envoyer un autre message !");
