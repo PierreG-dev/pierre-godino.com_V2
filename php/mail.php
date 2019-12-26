@@ -9,7 +9,13 @@
 
     $to      = 'pierregodino.contact@yahoo.com';
     $subject = 'DEVIS | ' . $name;
-    $message = $content . ' | ' . $phone . ' | ' . $mail;
+    $message = ` <h1 style="text-align: center;margin-bottom: 50px">DEMANDE DE DEVIS</h1>
+                 <hr>
+                 <p style="text-align: center;">$content</p>
+                 <hr>
+                 <p style="text-align: center;">Numéro de téléphone: $phone</p>
+                 <p style="text-align: center;">Email: $mail</p>
+                `;
     $headers = array(
         'From' => 'site@pierre-godino.com',
     );
