@@ -132,15 +132,16 @@ function titlesUpdate() {
 const mailButton = document.querySelector('#mailBtn');
 const inputs = document.querySelectorAll('input');
 const contentArea = document.querySelector('textarea');
+const formClose = document.querySelector('#formClose');
 mailButton.onclick = mailRequest
+formClose.onclick = () => {
+    blackScreenForm.click();
+}
 function mailRequest() {
     if (!(readCookie("mailProtect") == "active")) {
         if (inputs[3].value == "")
             sendMail(0, inputs[0].value, inputs[1].value, inputs[2].value, contentArea.value);
-        for (let i = 0; i < 4; ++i) {
-            inputs[i].value = "";
-        }
-        contentArea.value = "";
+        
         blackScreenForm.click();
         createCookie("mailProtect", 'active', 720);
     }
@@ -523,6 +524,10 @@ contactButton.onclick = () => {
             document.body.style.overflowY = 'visible';
             form.style.display = "none";
             form.style.opacity = "0";
+            for (let i = 0; i < 4; ++i) {
+                inputs[i].value = "";
+            }
+            contentArea.value = "";
     }
 }
 
