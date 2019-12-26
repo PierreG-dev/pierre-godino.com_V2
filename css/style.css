@@ -136,6 +136,30 @@ body {
     height: auto;
 }
 
+/* ---------- Cookie alert ---------- */
+.cookieAlert {
+    background: var(--carbon-dark);
+    color: var(--lighty-white);
+    border-radius: 5px 5px 0 0;
+    padding: 10px;
+    position: fixed;
+    top: 90%;
+    right: 0;
+    width: 40%;
+    left: 2%;
+    height: 10%;
+    text-align: center;
+    border: 0.1px solid var(--lighty-white);
+    border-bottom: 0;
+    z-index: 11;
+    -webkit-box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.5);
+}
+
+.cookieAlert .btn {
+    margin: 0 10px;
+}
 
 /*=============================================
                     NAVBAR

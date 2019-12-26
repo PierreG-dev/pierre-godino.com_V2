@@ -4,8 +4,27 @@
 
 // 0-> fr
 // 1 -> en
-var language = 0;
+var language;
 var headerState = 0;
+
+function setup() {
+    let temp = readCookie("language");
+    if (temp != "") {
+        console.log(temp);
+        language = parseInt(temp);
+        languageSwitch();
+        languageSwitch();
+        
+    }
+    else {
+        console.log(temp);
+        language = 0;
+        createCookie("language", language);
+        languageSwitch();
+        languageSwitch();
+        
+    }
+}
 
 
 function updateAll() {
@@ -34,7 +53,7 @@ function readCookie(name) {
         while (c.charAt(0) == ' ') c = c.substring(1, c.length);
         if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
     }
-    return null;
+    return "";
 }
 
 function eraseCookie(name) {
@@ -86,11 +105,13 @@ function languageSwitch() {
         case 1: //anglais
             languageflags.style.transform = 'translate3d(0,0,0)';
             language = 0;
+            createCookie("language", language);
             updateAll();
             break;
         default: //francais
             languageflags.style.transform = 'translate3d(0,-50%,0)';
             language = 1;
+            createCookie("language", language);
             updateAll();
             break;
     }
@@ -150,6 +171,8 @@ function mailRequest() {
     }
 }
 
+
+/* COOKIE ALERT */
 
 
 /*=============================================
@@ -568,3 +591,4 @@ function footerUpdate() {
 }
 
 footerUpdate();
+setup();
