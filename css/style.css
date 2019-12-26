@@ -149,7 +149,7 @@ body {
     left: 2%;
     height: 10%;
     text-align: center;
-    border: 0.1px solid var(--lighty-white);
+    border: 0.1px solid var(--footer-color);
     border-bottom: 0;
     z-index: 11;
     transition: 0.5s;

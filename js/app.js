@@ -10,14 +10,12 @@ var headerState = 0;
 function setup() {
     let temp = readCookie("language");
     if (temp != "") {
-        console.log(temp);
         language = parseInt(temp);
         languageSwitch();
         languageSwitch();
         
     }
     else {
-        console.log(temp);
         language = 0;
         createCookie("language", language);
         languageSwitch();
@@ -176,7 +174,6 @@ function mailRequest() {
 const cookieAlertWindow = document.querySelector('#cookieAlert');
 const cookieAlertClose = document.querySelector('#cookieAlertClose');
 cookieAlertClose.onclick = () => {
-    console.log('test');
     cookieAlertWindow.style.transform = "translate3d(0,100%,0)";
 }
 
