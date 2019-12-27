@@ -102,3 +102,27 @@ body {
     background: var(--lighty-white);
     color: var(--bloody-red);
 }
+
+@media (max-width: 767px) {
+    .formContact {
+        width: 350px;
+        height: 500px;
+        margin-right: -175px;
+        right: 50%;
+        top: 50%;
+        margin-top: -250px;
+    }
+
+    .formContact input {
+        width: 300px;
+    }
+
+    .formContact textarea {
+        width: 325px;
+    }
+
+    .contactButton {
+        font-size: 1.4rem;
+        text-align: center;
+    }
+}

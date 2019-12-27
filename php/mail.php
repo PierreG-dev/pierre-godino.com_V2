@@ -17,9 +17,12 @@
                      <p style='text-align: center;'>Numero de telephone: " . $phone . "</p>
                      <p style='text-align: center;'>Email: " . $mail . "</p>
                 </div>";
-    $headers .= 'From: DEVIS <site@pierre-godino.com>' . "\r\n"; 
+    $headers .= 'From: <site@pierre-godino.com>' . "\r\n"; 
     $headers .= "MIME-Version: 1.0\r\n";
     $headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
+    $headers .= "Disposition-Notification-To: $from  \n";
+    $headers .= "X-Priority: 1  \n";
+    $headers .= "X-MSMail-Priority: High \n";
 
     
     mail($to, $subject, $message, $headers);
