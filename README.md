@@ -1,5 +1,13 @@
 # Pierre-godino.com V2
 
+## V2.45 Update log
+
+- Contact form, form button, and cookie alert now ___mobile friendly___.  
+- inputs does now have ___types___.  
+- some ___changes___ to the mailing script.  
+
+
+
 ## V2.4 Update log
 
 - Contact form now accessible and ready for use.  
@@ -10,4 +18,5 @@
 - Replaced ___live map___ with a static image of it, caused performance & rights problems.  
 - Favorite ___language___ will now be remembered by the website, stocked in a ___cookie___.  
 - All ```alt=""``` tags are now ___filled___ and all links are now ```https://```.  
+
 
