@@ -205,3 +205,5 @@ const legalData = {
         francais: 'MENTIONS LEGALES',
         english: 'LEGAL MENTIONS'
 };
+
+//ressources pour le formulaire

@@ -1237,10 +1237,12 @@ footer .upperPart .logo img:hover {
 }
 
 footer .upperPart .footnav {
+    align-self: flex-start;
     display: flex;
     width: 400px;
     height: 100%;
     flex-direction: column;
+    justify-content: space-between;
 }
 footer .upperPart .footnav h4 {
     color: white;
