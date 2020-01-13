@@ -1,4 +1,4 @@
- /*=============================================
+/*=============================================
                    GENERAL
 ===============================================*/
 
@@ -13,17 +13,14 @@ function setup() {
         language = parseInt(temp);
         languageSwitch();
         languageSwitch();
-        
     }
     else {
         language = 0;
         createCookie("language", language);
         languageSwitch();
         languageSwitch();
-        
     }
 }
-
 
 function updateAll() {
     navbarUpdate();
@@ -145,11 +142,8 @@ function titlesUpdate() {
             titlePortfolio.innerHTML = `${titleData[1].francais}`;
             titleContact.innerHTML = `${titleData[2].francais}`;
             break;
-
     }
 }
-
-
 
 
 
@@ -194,8 +188,10 @@ function navbarUpdate() {
 
             default: // cas 0
                 navbarList.innerHTML += `<li><a href="${navbarData[i].href_id}" class="navbar_element">${navbarData[i].francais}</a></li>`
+                break;
         }
     }
+
     return 0;
 }
 
@@ -241,6 +237,8 @@ $navbar.waypoint(function(direction) {
         $('.competences').removeClass('navbar_fix');
     }
 }, {offset:'6vh'});
+
+
 
 /*=============================================
                     HEADER

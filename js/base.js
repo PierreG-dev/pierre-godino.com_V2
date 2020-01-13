@@ -15,11 +15,11 @@ const navbarData = [
         english: 'Portfolio',
         href_id: '#portfolio'
     },
-    {
-        francais: 'A propos',
-        english: 'About',
-        href_id: '#about'
-    },
+    // {
+    //     francais: 'A propos',
+    //     english: 'About',
+    //     href_id: '#about'
+    // },
     {
         francais: 'Contact',
         english: 'Contact',
