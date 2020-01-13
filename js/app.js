@@ -1,4 +1,4 @@
-/*=============================================
+ /*=============================================
                    GENERAL
 ===============================================*/
 
@@ -33,6 +33,8 @@ function updateAll() {
     skillsUpdate();
     contactUpdate();
     footerUpdate();
+    formUpdate();
+
     return 0;
 }
 
@@ -147,48 +149,8 @@ function titlesUpdate() {
 }
 
 
-/* MAIL */
-const mailButton = document.querySelector('#mailBtn');
-const inputs = document.querySelectorAll('input');
-const contentArea = document.querySelector('textarea');
-const formClose = document.querySelector('#formClose');
-mailButton.onclick = mailRequest
-formClose.onclick = () => {
-    blackScreenForm.click();
-}
 
-function inputsCheck() {
-    let state = true;
-    for(let i = 0; i < inputs.length - 1; ++i) {
-        inputs[i].style.boxShadow = "";
-        if (inputs[i].value == "") {
-            state = false;
-            inputs[i].style.boxShadow = "0px 0px 10px 0px red";
-        }
-    }
-    contentArea.style.boxShadow = "";
-    if (contentArea.value == "") {
-        state = false;
-        contentArea.style.boxShadow = "0px 0px 10px 0px red";
-    }
 
-    return state;
-}
-
-function mailRequest() {
-    if (!(readCookie("mailProtect") == "active")) {
-        if(inputsCheck()) {
-            if (inputs[3].value == "") {
-                sendMail(0, inputs[0].value, inputs[1].value, inputs[2].value, contentArea.value);
-                blackScreenForm.click();
-                createCookie("mailProtect", 'active', 720);
-            }
-        }
-    }
-    else {
-        alert("Il est trop tôt pour envoyer un autre message !");
-    }
-}
 
 
 /* COOKIE ALERT */
@@ -553,18 +515,59 @@ function contactUpdate() {
 
 contactUpdate();
 
-const contactButton = document.querySelector('.contactButton');
+
 const blackScreenForm = document.querySelector('#formBS');
 const form = document.querySelector('#formulaire');
 
-contactButton.onclick = () => {
-    form.style.display = "flex";
-    form.style.opacity = "1";
-    blackScreenForm.style.opacity = '0.8';
-    blackScreenForm.style.cursor = 'pointer';
-    blackScreenForm.style.zIndex = '12';
-    document.body.style.overflowY = 'hidden';
-    blackScreenForm.onclick = () => {
+function formUpdate() {
+    form.innerHTML = '';
+    switch (language) {
+        case 1:
+            form.innerHTML = `<i class="fa fa-times" aria-hidden="true" id="formClose"></i>
+
+                            <h4>${formData[0].english}</h4>
+                            
+                            <label for="name">${formData[1].english}</label>
+                            <input type="text" size="50" placeholder="${formData[2].english}" name="nom" maxlength="25">
+                            <label for="phone">${formData[3].english}</label>
+                            <input type="tel" size="50" placeholder="${formData[4].english}" name="telephone" maxlength="12">
+                            <label for="mail">${formData[5].english}</label>
+                            <input type="email" size="50" placeholder="${formData[6].english}" name="email" maxlength="35">
+                            <input type="text" id="temoin" style="display:none;">
+                            <textarea name="Content" id="content" cols="60" rows="10" placeholder="${formData[7].english}" maxlength="500"></textarea>
+                            <div class="btn btn-success" id="mailBtn">${formData[8].english}</div>
+            `;
+            break;
+
+        default:
+            form.innerHTML = `<i class="fa fa-times" aria-hidden="true" id="formClose"></i>
+
+                            <h4>${formData[0].francais}</h4>
+                            
+                            <label for="name">${formData[1].francais}</label>
+                            <input type="text" size="50" placeholder="${formData[2].francais}" name="nom" maxlength="25">
+                            <label for="phone">${formData[3].francais}</label>
+                            <input type="tel" size="50" placeholder="${formData[4].francais}" name="telephone" maxlength="12">
+                            <label for="mail">${formData[5].francais}</label>
+                            <input type="email" size="50" placeholder="${formData[6].francais}" name="email" maxlength="35">
+                            <input type="text" id="temoin" style="display:none;">
+                            <textarea name="Content" id="content" cols="60" rows="10" placeholder="${formData[7].francais}" maxlength="500"></textarea>
+                            <div class="btn btn-success" id="mailBtn">${formData[8].francais}</div>
+            `;
+            break;
+
+    }
+
+    let contactButton = document.querySelector('.contactButton');
+
+    contactButton.onclick = () => {
+        form.style.display = "flex";
+        form.style.opacity = "1";
+        blackScreenForm.style.opacity = '0.8';
+        blackScreenForm.style.cursor = 'pointer';
+        blackScreenForm.style.zIndex = '12';
+        document.body.style.overflowY = 'hidden';
+        blackScreenForm.onclick = () => {
             blackScreenForm.style.opacity = '0.3';
             blackScreenForm.style.zIndex = '-1';
             document.body.style.overflowY = 'visible';
@@ -574,8 +577,56 @@ contactButton.onclick = () => {
                 inputs[i].value = "";
             }
             contentArea.value = "";
+        }
+    }
+
+    /* MAIL */
+    let mailButton = document.querySelector('#mailBtn');
+    const inputs = document.querySelectorAll('input');
+    const contentArea = document.querySelector('textarea');
+    const formClose = document.querySelector('#formClose');
+    mailButton.onclick = mailRequest
+    formClose.onclick = () => {
+        blackScreenForm.click();
+    }
+    
+}
+
+function inputsCheck() {
+    let state = true;
+    for (let i = 0; i < inputs.length - 1; ++i) {
+        inputs[i].style.boxShadow = "";
+        if (inputs[i].value == "") {
+            state = false;
+            inputs[i].style.boxShadow = "0px 0px 10px 0px red";
+        }
+    }
+    contentArea.style.boxShadow = "";
+    if (contentArea.value == "") {
+        state = false;
+        contentArea.style.boxShadow = "0px 0px 10px 0px red";
+    }
+
+    return state;
+}
+function mailRequest() {
+    if (!(readCookie("mailProtect") == "active")) {
+        if (inputsCheck()) {
+            if (inputs[3].value == "") {
+                sendMail(0, inputs[0].value, inputs[1].value, inputs[2].value, contentArea.value);
+                blackScreenForm.click();
+                createCookie("mailProtect", 'active', 720);
+            }
+        }
+    }
+    else {
+        alert("Il est trop tôt pour envoyer un autre message !");
     }
 }
+
+
+
+
 
 
 

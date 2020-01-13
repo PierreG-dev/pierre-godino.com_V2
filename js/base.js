@@ -207,3 +207,41 @@ const legalData = {
 };
 
 //ressources pour le formulaire
+const formData = [
+    {
+        francais: 'Demande de devis',
+        english: 'Quote request'
+    },
+    {
+        francais: 'Nom',
+        english: 'Name'
+    },
+    {
+        francais: 'Entrez votre nom',
+        english: 'Enter your name'
+    },
+    {
+        francais: 'Téléphone',
+        english: 'Phone'
+    },
+    {
+        francais: 'Entrez votre numéro de téléphone',
+        english: 'Enter your phone number'
+    },
+    {
+        francais: 'E-mail',
+        english: 'E-mail'
+    },
+    {
+        francais: 'Entrez votre e-mail de contact',
+        english: 'Enter your contact e-mail'
+    },
+    {
+        francais: 'Résumez brievement votre projet',
+        english: 'Briefly summarize your project'
+    },
+    {
+        francais: 'Envoyer',
+        english: 'Send'
+    }
+]
