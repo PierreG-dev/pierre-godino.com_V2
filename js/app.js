@@ -2,7 +2,7 @@
                    GENERAL
 ===============================================*/
 
-// 0-> fr
+// 0 -> fr
 // 1 -> en
 var language;
 var headerState = 0;
@@ -34,6 +34,7 @@ function updateAll() {
     contactUpdate();
     footerUpdate();
     formUpdate();
+    cookieUpdate();
 
     return 0;
 }
@@ -156,8 +157,25 @@ function titlesUpdate() {
 /* COOKIE ALERT */
 const cookieAlertWindow = document.querySelector('#cookieAlert');
 const cookieAlertClose = document.querySelector('#cookieAlertClose');
+const cookieAlertMsg = document.querySelector('#cookieAlertMsg');
+const cookieAlertInfo = document.querySelector('#cookieAlertInfo');
 cookieAlertClose.onclick = () => {
     cookieAlertWindow.style.transform = "translate3d(0,100%,0)";
+}
+function cookieUpdate() {
+    switch(language) {
+        case 1: 
+            cookieAlertMsg.innerHTML = cookieAlertData[0].english;
+            cookieAlertClose.innerHTML = cookieAlertData[1].english;
+            cookieAlertInfo.innerHTML = cookieAlertData[2].english;
+            break;
+
+        default:
+            cookieAlertMsg.innerHTML = cookieAlertData[0].francais;
+            cookieAlertClose.innerHTML = cookieAlertData[1].francais;
+            cookieAlertInfo.innerHTML = cookieAlertData[2].francais;
+            break;
+    }
 }
 
 /*=============================================

@@ -365,7 +365,7 @@ body {
         margin: 0 6px;
     }
 
-/*TODO*/
+
     .navBurger {
         width: 10%;
         visibility: visible;
@@ -550,7 +550,7 @@ header .container .mainContainer .main_element .description {
 @media (max-width: 991px) {
     header .container img {
         width: auto;
-        height: 100%;
+        height: 140%;
         top: -30%;
         left: -70%;
     }

@@ -248,4 +248,20 @@ const formData = [
         francais: 'Demander un devis',
         english: 'Ask for a quote'
     }
-]
+];
+
+//Cookie alert
+const cookieAlertData = [
+    {
+        francais: 'Ce site WEB utilise des cookies pour assurer une expérience utilisateur optimale',
+        english: 'This WEBSITE uses cookies to ensure an optimal user experience'
+    },
+    {
+        francais: "J'accepte",
+        english: 'OK'
+    },
+    {
+        francais: 'En savoir plus',
+        english: 'About'
+    }
+];
