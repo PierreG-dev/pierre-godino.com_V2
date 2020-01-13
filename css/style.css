@@ -365,8 +365,9 @@ body {
         margin: 0 6px;
     }
 
-
+/*TODO*/
     .navBurger {
+        width: 10%;
         visibility: visible;
         position: sticky;
         color: var(--lighty-white);
