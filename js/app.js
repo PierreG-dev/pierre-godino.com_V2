@@ -493,6 +493,7 @@ function hrSupplier(i) {
 }
 
 function contactUpdate() {
+    let contactButton = document.querySelector('.contactButton');
     contactInfobox.innerHTML = '';
 
     for(let i =0; i < contactData.length; ++i) {
@@ -510,6 +511,15 @@ function contactUpdate() {
                                              <a href="${contactData[i].href}" target="_blank" rel="noopener">${contactData[i].francais[1]}</a>`;
                 break;
         }
+    }
+    switch(language) {
+        case 1:
+            contactButton.innerHTML = formData[9].english;
+            break;
+        
+        default:
+            contactButton.innerHTML = formData[9].francais;
+            break;
     }
 }
 

@@ -243,5 +243,9 @@ const formData = [
     {
         francais: 'Envoyer',
         english: 'Send'
+    },
+    {
+        francais: 'Demander un devis',
+        english: 'Ask for a quote'
     }
 ]

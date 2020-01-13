@@ -541,7 +541,7 @@ header .container .mainContainer .main_element .description {
         width: 160%;
         height: auto;
         top: -10%;
-        left: -20%;
+        left: -50%;
     }
     
 }
@@ -549,9 +549,9 @@ header .container .mainContainer .main_element .description {
 @media (max-width: 991px) {
     header .container img {
         width: auto;
-        height: 140%;
-        top: -10%;
-        left: -20%;
+        height: 100%;
+        top: -30%;
+        left: -70%;
     }
     
 }
