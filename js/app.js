@@ -585,7 +585,7 @@ function formUpdate() {
     }
 
     let contactButton = document.querySelector('.contactButton');
-
+    
     contactButton.onclick = () => {
         form.style.display = "flex";
         form.style.opacity = "1";
@@ -608,9 +608,9 @@ function formUpdate() {
 
     /* MAIL */
     let mailButton = document.querySelector('#mailBtn');
-    const inputs = document.querySelectorAll('input');
-    const contentArea = document.querySelector('textarea');
-    const formClose = document.querySelector('#formClose');
+    let inputs = document.querySelectorAll('input');
+    let contentArea = document.querySelector('textarea');
+    let formClose = document.querySelector('#formClose');
     mailButton.onclick = mailRequest
     formClose.onclick = () => {
         blackScreenForm.click();
@@ -619,6 +619,11 @@ function formUpdate() {
 }
 
 function inputsCheck() {
+    let mailButton = document.querySelector('#mailBtn');
+    let inputs = document.querySelectorAll('input');
+    let contentArea = document.querySelector('textarea');
+    let formClose = document.querySelector('#formClose');
+
     let state = true;
     for (let i = 0; i < inputs.length - 1; ++i) {
         inputs[i].style.boxShadow = "";
@@ -636,6 +641,11 @@ function inputsCheck() {
     return state;
 }
 function mailRequest() {
+    let mailButton = document.querySelector('#mailBtn');
+    let inputs = document.querySelectorAll('input');
+    let contentArea = document.querySelector('textarea');
+    let formClose = document.querySelector('#formClose');
+
     if (!(readCookie("mailProtect") == "active")) {
         if (inputsCheck()) {
             if (inputs[3].value == "") {
